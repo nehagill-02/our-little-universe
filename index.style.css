@@ -1,0 +1,120 @@
+body {
+    background-color: #050816;
+    color: white;
+    font-family: georgia, seirf;
+    margin: 0;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ===== HOME PAGE STARS ===== */
+
+/* ===== HOME PAGE STARS ===== */
+
+.hero {
+    background-image: 
+        radial-gradient(2px 2px at 8% 18%, white, transparent),
+        radial-gradient(1px 1px at 18% 72%, white, transparent),
+        radial-gradient(2px 2px at 28% 32%, white, transparent),
+        radial-gradient(1px 1px at 38% 82%, white, transparent),
+        radial-gradient(2px 2px at 48% 18%, white, transparent),
+        radial-gradient(1px 1px at 58% 68%, white, transparent),
+        radial-gradient(2px 2px at 68% 28%, white, transparent),
+        radial-gradient(1px 1px at 78% 78%, white, transparent),
+        radial-gradient(2px 2px at 88% 16%, white, transparent),
+        radial-gradient(1px 1px at 94% 58%, white, transparent),
+
+        radial-gradient(1px 1px at 12% 92%, white, transparent),
+        radial-gradient(2px 2px at 32% 58%, white, transparent),
+        radial-gradient(1px 1px at 62% 42%, white, transparent),
+        radial-gradient(2px 2px at 82% 92%, white, transparent),
+        radial-gradient(1px 1px at 72% 52%, white, transparent),
+
+        radial-gradient(1px 1px at 5% 45%, white, transparent),
+        radial-gradient(2px 2px at 15% 30%, white, transparent),
+        radial-gradient(1px 1px at 22% 12%, white, transparent),
+        radial-gradient(2px 2px at 35% 12%, white, transparent),
+        radial-gradient(1px 1px at 43% 48%, white, transparent),
+        radial-gradient(2px 2px at 52% 90%, white, transparent),
+        radial-gradient(1px 1px at 67% 12%, white, transparent),
+        radial-gradient(2px 2px at 76% 38%, white, transparent),
+        radial-gradient(1px 1px at 86% 72%, white, transparent),
+        radial-gradient(1px 1px at 97% 88%, white, transparent);
+}
+/* glow */
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(80, 120, 255, 0.15);
+    border-radius: 50%;
+    filter: blur(100px);
+}
+
+/* northen lighty glow */
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 300px;
+    background: rgba(80, 255, 200, 0.08);
+    border-radius: 50%;
+    transform: rotate(-20deg);
+}
+
+/* main title*/
+.hero h1 {
+    margin: 0;
+    font-family: Brush Script MT, cursive;
+    font-size: 70px;
+    font-weight: normal;
+    position: relative;
+    z-index: 2;
+}
+
+/*subtitle */ 
+.hero p {
+    margin-top: 15px;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-style: italic;
+    letter-spacing: 2px; 
+    position: relative;
+    z-index: 2;
+}
+
+/* Journey Button */
+.journey-button {
+    margin-top: 35px;
+    padding: 12px 28px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.journey-button:hover {
+    background: rgba(120, 180, 255, 0.3);
+    border-color: white;
+    box-shadow:
+        0 0 10px rgba(120, 180, 255, 0.9),
+        0 0 25px rgba(120, 180, 255, 0.7),
+        0 0 45px rgba(120, 180, 255, 0.5);
+    transform: scale(1.05);
+}

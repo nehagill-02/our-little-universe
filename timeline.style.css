@@ -1,0 +1,888 @@
+body {
+    background-color: #0B1426;
+    color: rgb(7, 3, 3);
+    font-family: Georgia, serif;
+    margin: 0;
+}
+/* Page Transition */
+
+body {
+    animation: pageEnter 0.8s ease;
+}
+
+@keyframes pageEnter {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+body.page-exit {
+    opacity: 0;
+}
+/* Timeline Page */
+
+.timeline-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+    background-color: #9ab5eb;
+}
+
+.timeline-page h1 {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif; 
+    font-size: 55px;
+    font-weight: normal;
+}
+
+.timeline-intro {
+    margin-top: 15px;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+/* Timeline Text Entrance */
+
+.timeline-page h1,
+.timeline-intro {
+    opacity: 0;
+    animation: textEnter 1.2s ease forwards;
+}
+
+.timeline-intro {
+    animation-delay: 0.3s;
+}
+
+@keyframes textEnter {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* First Timeline Moment */
+
+.timeline-start {
+    margin-top: 100px;
+    text-align: center;
+    opacity: 0;
+    animation: timelineReveal 1.2s ease forwards;
+    animation-delay: 0.8s;
+}
+
+.timeline-label {
+    font-family: Georgia, serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    opacity: 0.7;
+}
+
+.timeline-start h2 {
+    margin: 18px 0 10px;
+    font-family: "Brush Script MT", cursive;
+    font-size: 48px;
+    font-weight: normal;
+}
+
+.timeline-start p {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-style: italic;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+@keyframes timelineReveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.memory-date {
+    font-family: Georgia, serif;
+    font-size: 14px;
+    letter-spacing: 3px;
+    opacity: 0.75;
+}
+.memory-section {
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 60px 30px;
+    text-align: center;
+
+    background:
+        radial-gradient(circle at 50% 25%, rgba(110, 170, 220, 0.25), transparent 55%),
+        #72e28a;
+}
+.hidden {
+    display: none !important;
+}
+
+.memory-content p {
+    font-style: italic;
+}
+
+#memory-1 {
+    color: #040a13;
+}
+#memory-2 {
+    color: #040a13;
+}
+#memory-3 {
+    color: #040a13;
+}
+#memory-4 {
+    color: #040a13;
+}
+#memory-5 {
+    color: #040a13;
+}
+#memory-6 {
+    color: #040a13;
+}
+#memory-7 {
+    color: #040a13;
+}
+#memory-8 {
+    color: #040a13;
+}
+#memory-9 {
+    color: #040a13;
+}
+/* ===== SAME BACKGROUND FOR ALL MEMORIES ===== */
+
+#memory-1,
+#memory-2,
+#memory-3,
+#memory-4,
+#memory-5,
+#memory-6,
+#memory-7,
+#memory-8,
+#memory-9 {
+    background:
+        radial-gradient(circle at 50% 25%, rgba(103, 204, 235, 0.18), transparent 55%),
+        linear-gradient(to bottom, #80e5ec, #6ca7e7);
+}
+/* ===== FULL SCREEN BIRTHDAY MESSAGE ===== */
+
+#birthday-message {
+    position: fixed;
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(255, 255, 255, 0.45),
+            transparent 50%
+        ),
+        linear-gradient(
+            to bottom,
+            #87CEEB,
+            #BFEAF7
+        );
+
+    color: #123247;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1000;
+}
+/* ===== BIRTHDAY PARTY ===== */
+
+#birthday-party {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100vw !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+
+    background: #87CEEB !important;
+
+    color: #123247 !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999 !important;
+}
+.birthday-title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 72px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin: 0;
+}
+.birthday-party-content {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 20px;
+}
+
+.birthday-party-content p {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 20px;
+}
+.birthday-cake {
+    font-size: 100px;
+    margin: 25px 0;
+    animation: cakePop 1s ease-out;
+}
+
+@keyframes cakePop {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    70% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+.fireworks {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.firework {
+    position: absolute;
+    font-size: 45px;
+    opacity: 0;
+    animation: fireworkPop 2s ease-in-out infinite;
+}
+
+.firework-1 {
+    top: 12%;
+    left: 12%;
+}
+
+.firework-2 {
+    top: 15%;
+    right: 12%;
+    animation-delay: 0.4s;
+}
+
+.firework-3 {
+    top: 35%;
+    left: 7%;
+    animation-delay: 0.8s;
+}
+
+.firework-4 {
+    top: 38%;
+    right: 7%;
+    animation-delay: 1.2s;
+}
+
+.firework-5 {
+    bottom: 15%;
+    left: 15%;
+    animation-delay: 1.6s;
+}
+
+.firework-6 {
+    bottom: 12%;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+.firework-7 {
+    top: 8%;
+    left: 45%;
+    animation-delay: 2.4s;
+}
+
+.firework-8 {
+    bottom: 10%;
+    right: 45%;
+    animation-delay: 2.8s;
+}
+@keyframes fireworkPop {
+
+    0% {
+        opacity: 0;
+        transform: scale(0.2) rotate(0deg);
+    }
+
+    20% {
+        opacity: 1;
+        transform: scale(1.4) rotate(45deg);
+    }
+
+    45% {
+        opacity: 0.9;
+        transform: scale(1) rotate(90deg);
+    }
+
+    70% {
+        opacity: 0.6;
+        transform: scale(1.5) rotate(135deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.2) rotate(180deg);
+    }
+    
+}
+.firework {
+    position: absolute;
+    font-size: 55px;
+    opacity: 0;
+    animation: fireworkPop 2s ease-in-out infinite;
+}
+/* ===== BIRTHDAY BALLOONS ===== */
+
+.balloons {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.balloon {
+    position: absolute;
+    font-size: 55px;
+    animation: balloonFloat 4s ease-in-out infinite;
+}
+
+.balloon-1 {
+    top: 8%;
+    left: 5%;
+}
+
+.balloon-2 {
+    top: 22%;
+    left: 18%;
+    animation-delay: 0.8s;
+}
+
+.balloon-3 {
+    bottom: 10%;
+    left: 6%;
+    animation-delay: 1.5s;
+}
+
+.balloon-4 {
+    top: 8%;
+    right: 5%;
+    animation-delay: 0.4s;
+}
+
+.balloon-5 {
+    top: 22%;
+    right: 18%;
+    animation-delay: 1.2s;
+}
+
+.balloon-6 {
+    bottom: 10%;
+    right: 6%;
+    animation-delay: 2s;
+}
+
+@keyframes balloonFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+}
+/* ===== I LOVE YOU 3000 ===== */
+
+.love-you {
+    font-family: "Brush Script MT", "Segoe Script", cursive;
+    font-size: 38px;
+    margin-top: 25px;
+    letter-spacing: 2px;
+
+    animation: loveGlow 2s ease-in-out infinite;
+}
+
+@keyframes loveGlow {
+
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.85;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+
+}
+/* ===== TINY BIRTHDAY SPARKLES ===== */
+
+.birthday-sparkles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.sparkle {
+    position: absolute;
+    font-size: 18px;
+    opacity: 0.7;
+    animation: sparkleTwinkle 2.5s ease-in-out infinite;
+}
+
+.sparkle-1 {
+    top: 18%;
+    left: 30%;
+}
+
+.sparkle-2 {
+    top: 12%;
+    right: 30%;
+    animation-delay: 0.4s;
+}
+
+.sparkle-3 {
+    top: 42%;
+    left: 22%;
+    animation-delay: 0.8s;
+}
+
+.sparkle-4 {
+    top: 48%;
+    right: 22%;
+    animation-delay: 1.2s;
+}
+
+.sparkle-5 {
+    bottom: 25%;
+    left: 28%;
+    animation-delay: 1.6s;
+}
+
+.sparkle-6 {
+    bottom: 22%;
+    right: 28%;
+    animation-delay: 2s;
+}
+
+.sparkle-7 {
+    top: 32%;
+    left: 38%;
+    animation-delay: 0.6s;
+}
+
+.sparkle-8 {
+    top: 35%;
+    right: 38%;
+    animation-delay: 1s;
+}
+
+.sparkle-9 {
+    bottom: 18%;
+    left: 42%;
+    animation-delay: 1.4s;
+}
+
+.sparkle-10 {
+    bottom: 20%;
+    right: 42%;
+    animation-delay: 1.8s;
+}
+
+@keyframes sparkleTwinkle {
+
+    0%, 100% {
+        opacity: 0.25;
+        transform: scale(0.7);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+}
+/* ===== MEMORY DECORATIONS ===== */
+
+.memory-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.memory-decorations {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.memory-decorations span {
+    position: absolute;
+    font-size: 20px;
+    opacity: 0.6;
+    animation: memoryFloat 4s ease-in-out infinite;
+}
+
+/* Different positions */
+
+.memory-decorations span:nth-child(1) {
+    top: 12%;
+    left: 10%;
+}
+
+.memory-decorations span:nth-child(2) {
+    top: 20%;
+    right: 12%;
+    animation-delay: 0.8s;
+}
+
+.memory-decorations span:nth-child(3) {
+    top: 50%;
+    left: 7%;
+    animation-delay: 1.2s;
+}
+
+.memory-decorations span:nth-child(4) {
+    bottom: 18%;
+    right: 10%;
+    animation-delay: 1.8s;
+}
+
+.memory-decorations span:nth-child(5) {
+    bottom: 12%;
+    left: 14%;
+    animation-delay: 2.4s;
+}
+
+@keyframes memoryFloat {
+
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(5deg);
+    }
+
+}
+/* ===== BIRTHDAY MESSAGE DECORATIONS ===== */
+
+#birthday-message {
+    position: relative;
+    overflow: hidden;
+}
+
+.birthday-land {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* ===== GREENERY ===== */
+
+.grass {
+    position: absolute;
+    font-size: 34px;
+    opacity: 0.75;
+}
+
+.grass-1 {
+    bottom: 7%;
+    left: 6%;
+}
+
+.grass-2 {
+    top: 18%;
+    left: 10%;
+    font-size: 28px;
+}
+
+.grass-3 {
+    bottom: 10%;
+    right: 7%;
+}
+
+.grass-4 {
+    top: 30%;
+    right: 12%;
+    font-size: 27px;
+}
+
+.grass-5 {
+    top: 12%;
+    right: 32%;
+    font-size: 25px;
+}
+
+.grass-6 {
+    bottom: 20%;
+    left: 30%;
+    font-size: 26px;
+}
+
+
+/* ===== HEARTS ===== */
+
+.birthday-heart {
+    position: absolute;
+    font-size: 24px;
+    opacity: 0.65;
+    animation: birthdayFloat 4s ease-in-out infinite;
+}
+
+.heart-1 {
+    top: 20%;
+    left: 28%;
+}
+
+.heart-2 {
+    top: 15%;
+    right: 15%;
+    animation-delay: 1s;
+}
+
+.heart-3 {
+    bottom: 25%;
+    left: 12%;
+    animation-delay: 1.5s;
+}
+
+.heart-4 {
+    bottom: 18%;
+    right: 30%;
+    font-size: 20px;
+    animation-delay: 2s;
+}
+
+.heart-5 {
+    top: 38%;
+    right: 7%;
+    font-size: 18px;
+    animation-delay: 2.5s;
+}
+
+
+/* ===== SOFT FLOATING EFFECT ===== */
+
+@keyframes birthdayFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+}
+/* ===== MEMORY ENTRANCE ANIMATION ===== */
+
+.memory-section:not(.hidden) .memory-header {
+    animation: memoryFadeIn 1s ease forwards;
+}
+
+.memory-section:not(.hidden) .memory-content {
+    animation: memoryFadeIn 1.2s ease forwards;
+    animation-delay: 0.15s;
+    opacity: 0;
+}
+
+.memory-section:not(.hidden) .continue-button {
+    animation: memoryFadeIn 1s ease forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+@keyframes memoryFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ===== BIRTHDAY MESSAGE ENTRANCE ===== */
+
+#birthday-message:not(.hidden) .birthday-message-content {
+    animation: birthdayMessageEnter 1.5s ease forwards;
+}
+
+@keyframes birthdayMessageEnter {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+#birthday-message:not(.hidden) .grass,
+#birthday-message:not(.hidden) .birthday-heart {
+    animation: birthdayDecorationEnter 1.2s ease forwards;
+    opacity: 0;
+}
+
+@keyframes birthdayDecorationEnter {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 0.75;
+        transform: translateY(0);
+    }
+}
+.screen-transition-out {
+    animation: screenFadeOut 0.6s ease forwards;
+}
+.screen-transition-in {
+    animation: screenFadeIn 0.8s ease forwards;
+}
+
+@keyframes screenFadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    
+}
+@keyframes screenFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+/* ===== MOBILE BIRTHDAY PARTY FIX ===== */
+
+@media (max-width: 600px) {
+
+    #birthday-party {
+        position: absolute !important;
+        height: auto !important;
+        min-height: 100vh !important;
+
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+
+        padding: 40px 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    .birthday-party-content {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .birthday-title {
+        font-size: 42px !important;
+        line-height: 1.15;
+    }
+
+    .birthday-cake {
+        font-size: 75px !important;
+        margin: 15px 0;
+    }
+
+    .birthday-party-content p {
+        font-size: 17px !important;
+    }
+
+    .love-you {
+        font-size: 30px !important;
+    }
+
+}
