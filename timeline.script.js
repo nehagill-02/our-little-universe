@@ -94,3 +94,17 @@ function showBirthdayParty() {
 
     changeScreen('birthday-message', 'birthday-party');
 }
+
+const timelineFullscreenButton = document.getElementById("timeline-fullscreen-button");
+
+if (timelineFullscreenButton) {
+    timelineFullscreenButton.addEventListener("click", async () => {
+        try {
+            if (!document.fullscreenElement) {
+                await document.documentElement.requestFullscreen();
+            }
+        } catch (error) {
+            console.error("Fullscreen could not be activated:", error);
+        }
+    });
+}
