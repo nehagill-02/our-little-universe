@@ -906,7 +906,7 @@ body.page-exit {
     gap: 24px;
     width: max-content;
     height: 100%;
-    animation: photoReelMove 90s linear infinite;
+    animation: photoReelMove 250s linear infinite;
 }
 
 .photo-reel-track img {
