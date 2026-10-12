@@ -7,7 +7,7 @@ function changeScreen(currentId, nextId) {
 
     currentScreen.classList.add('screen-transition-out');
 
-    setTimeout(() => {
+    setTimeout(() => { 
 
         currentScreen.classList.add('hidden');
         currentScreen.classList.remove('screen-transition-out');
@@ -32,6 +32,8 @@ function showMemory() {
     document.querySelector('.timeline-start').style.display = 'none';
 
     const memory = document.getElementById('memory-1');
+    // Start the reel only after Begin the Journey is clicked
+    document.getElementById('photo-reel').classList.remove('hidden');
 
     memory.classList.remove('hidden');
     memory.classList.add('screen-transition-in');
@@ -87,5 +89,8 @@ function showBirthdayMessage() {
 /* ===== BIRTHDAY PARTY ===== */
 
 function showBirthdayParty() {
+    // Stop and hide the reel before the final celebration
+    document.getElementById('photo-reel').classList.add('hidden');
+
     changeScreen('birthday-message', 'birthday-party');
 }

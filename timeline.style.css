@@ -886,3 +886,125 @@ body.page-exit {
     }
 
 }
+
+/* ===== MOVING BACKGROUND PHOTO REEL ===== */
+
+.photo-reel {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.32;
+}
+
+.photo-reel-track {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: max-content;
+    height: 100%;
+    animation: photoReelMove 90s linear infinite;
+}
+
+.photo-reel-track img {
+    width: 230px;
+    height: 160px;
+    flex: 0 0 auto;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes photoReelMove {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Keep memory text and decorations above the photos */
+.memory-section {
+    z-index: 2;
+    background-color: transparent;
+}
+
+/* Preserve the colorful memory gradients, but let photos show through */
+#memory-1,
+#memory-2,
+#memory-3,
+#memory-4,
+#memory-5,
+#memory-6,
+#memory-7,
+#memory-8,
+#memory-9 {
+    background:
+        radial-gradient(
+            circle at 50% 25%,
+            rgba(103, 204, 235, 0.18),
+            transparent 55%
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(128, 229, 236, 0.48),
+            rgba(108, 167, 231, 0.48)
+        );
+}
+
+/* Show the reel behind the birthday message too */
+#birthday-message {
+    z-index: 2;
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(255, 255, 255, 0.45),
+            transparent 50%
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(135, 206, 235, 0.65),
+            rgba(191, 234, 247, 0.65)
+        );
+}
+
+
+/* Moving photo reel */
+.photo-reel-track {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    width: max-content;
+    height: 100%;
+    animation: photoReelMove 55s linear infinite;
+}
+
+/* Tall photos — almost full screen */
+.photo-reel-track img {
+    width: 340px;
+    height: 85vh;
+    flex: 0 0 auto;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+}
+
+/* Phone screens */
+@media (max-width: 600px) {
+    .photo-reel-track img {
+        width: 250px;
+        height: 75vh;
+    }
+
+    .photo-reel-track {
+        gap: 18px;
+        animation-duration: 50s;
+    }
+}
+.photo-reel {
+    opacity: 0.45;
+}
